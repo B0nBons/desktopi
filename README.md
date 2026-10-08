@@ -13,3 +13,5 @@ Intended features to come include:
 - Fun customizable themes, obtained by hitting targets!
 - Automated desktop updates, scheduled for when you arent using your computer (since we've all tried to do something, only for your computer to decide to update)
 - No need for extreme hardware or a big battery! Optimized to be power efficient, and only on when you need it!
+
+We're gonna start with pomodoro timer (i cant do graphic design- problem for future me, i also dont know how to track hours i spent on graphic design stuff out of vscode, maybe ask the organizers of this..???)
