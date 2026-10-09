@@ -16,8 +16,8 @@ class PomodoroTimer(QObject):
     def __init__(self, work_mins = 25, break_mins = 5):
         # We set default pomodoro time values bc maybe some ppl use default
         super().__init__()
-        self.work_seconds = work_mins * 60
-        self.break_seconds = break_mins * 60
+        self.work_seconds = int(work_mins * 60)
+        self.break_seconds = int(break_mins * 60)
         self.time_left = self.work_seconds
         self.is_work_time = True
         self.is_on = False
@@ -61,20 +61,12 @@ class PomodoroTimer(QObject):
             self._switch_timer_status()
 
     def _switch_timer_status(self):
-        self.is_work_time = not self.is_work_time
-
-        # Change countdown based on current time status
         if self.is_work_time:
-            self.time_left = self.work_seconds
-        else:
+            self.is_work_time = False
             self.time_left = self.break_seconds
-
-        if self.is_work_time:
-            current_mode = "work"
+            self.status.emit("now in break!")
+            self.tick.emit(self.time_left)
         else:
-            current_mode = "break"
-
-        self.status.emit(f"now in {current_mode}!")
-        self.tick.emit(self.time_left)
+            self.reset()
 
 # OK Lets try this out.........

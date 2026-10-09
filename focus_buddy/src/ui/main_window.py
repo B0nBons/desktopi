@@ -3,8 +3,8 @@ from src.core.timer import PomodoroTimer
 from src.ui.widgets.timer_widget import TimerWidget
 # Import libraries
 
-WORK_MINS = 0.1
-BREAK_MINS = 0.05 
+WORK_MINS = 25
+BREAK_MINS = 5
 # THESE ARE TESTING/PLACEHOLDER VALUES!!! PLS CHANGE
 
 class MainWindow(QMainWindow):

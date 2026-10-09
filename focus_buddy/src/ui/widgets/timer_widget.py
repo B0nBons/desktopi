@@ -9,7 +9,7 @@ class TimerWidget(QWidget):
         # start with buttons
         self.start_btn = QPushButton("start")
         self.pause_btn = QPushButton("pause")
-        self.stop_btn = QPushButton("pause")
+        self.stop_btn = QPushButton("reset")
 
         # add in labels
         self.time_label = QLabel(self._format(timer.time_left))
@@ -44,6 +44,8 @@ class TimerWidget(QWidget):
         self.time_label.setText(self._format(seconds_left))
 
     @staticmethod
-    def _format(seconds)
-        mins, secs = divmod (seconds, 60)
+    def _format(seconds):
+        seconds = int(seconds)
+        mins, secs = divmod(seconds, 60)
         return f"{mins:02d}:{secs:02d}"
+
