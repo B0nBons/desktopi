@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Focus Buddy",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/focus_buddy/src/app.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+            }
+        }
+    ]
+    "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+    }
+}

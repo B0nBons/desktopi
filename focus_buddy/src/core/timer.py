@@ -52,6 +52,7 @@ class PomodoroTimer(QObject):
         self.time_left = self.work_seconds
         self.tick.emit(self.time_left)
         self.status.emit("ready to start!")
+        # Put the timer back to the default settings
 
     def _on_tick(self):
         if self.time_left > 0:
@@ -66,7 +67,9 @@ class PomodoroTimer(QObject):
             self.time_left = self.break_seconds
             self.status.emit("now in break!")
             self.tick.emit(self.time_left)
+            # Swap to the break timer after finishing the work timer
         else:
             self.reset()
+            # Reset timer after finishing the break
 
-# OK Lets try this out.........
+# WORKS!!!

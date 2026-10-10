@@ -1,0 +1,19 @@
+{
+    "name" : "strawberries and cream",
+    "font" : "IDK",
+    "radius" : "0px",
+    "border_width" : "5px",
+    "colors" : {
+        "bg" : "",
+        "card" : "",
+        "line" : "",
+        "text" : "",
+        "accent" : "",
+        "button" : "",
+        "button_text" : "",
+        "button_hover" : "",
+        "primary" : "",
+        "primary_hover" : ""
+    }
+}
+

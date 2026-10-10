@@ -5,7 +5,8 @@ from src.ui.widgets.timer_widget import TimerWidget
 
 WORK_MINS = 25
 BREAK_MINS = 5
-# THESE ARE TESTING/PLACEHOLDER VALUES!!! PLS CHANGE
+# Possibly make these choosable for users via a slider or such
+# However we shall save that for later
 
 class MainWindow(QMainWindow):
     def __init__(self):
