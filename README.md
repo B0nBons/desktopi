@@ -11,6 +11,7 @@ This project should be able to run on nearly all Operating Systems!
 To install, download this as a .zip file, and run the following:
 ```
 cd /focus_buddy/
+pip install -r requirements.txt
 python -m pip install pyinstaller
 python -m PyInstaller --onefile --windowed --name DesktoPI main.py
 ```
